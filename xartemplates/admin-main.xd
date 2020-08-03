@@ -1,0 +1,103 @@
+<xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1><xar:mlstring>Overview</xar:mlstring></h1>
+        <div class="xar-mod-content">
+
+          <img src="#xarTplGetImage('admin.png', 'base')#" alt="official icon" class="xar-module-icon" />
+
+          <h2>
+            <xar:mlstring>What is it?</xar:mlstring>
+          </h2>
+          <p>
+          <em><xar:mlstring>Images is a Xaraya Utility Module.</xar:mlstring></em>
+          <xar:mlstring>It is currently responsible for basic image manipulation, including the following:</xar:mlstring>
+            <ul>
+                <li><xar:mlstring>Resize Image files</xar:mlstring></li>
+                <li><xar:mlstring>Crop image files</xar:mlstring></li>
+                <li><xar:mlstring>Rotate image files</xar:mlstring></li>
+                <li><xar:mlstring>Add text to an image file (think buttons here...)</xar:mlstring></li>
+                <li>...</li>
+            </ul>
+          </p>
+          <h3>
+            <xar:mlstring>How to use it?</xar:mlstring>
+          </h3>
+
+            <h4>
+                <xar:mlstring>Image Tags</xar:mlstring>
+            </h4>
+            <p>
+                &lt;xar:image-resize src="FILEID" [width="([0-9]+)(px|%)" [height="([0-9]+)(px|%)"]] [constrain="0|1"] label="TEXT" /&gt;
+            </p>
+            <p>
+                <xar:mlstring>
+                    The IMAGE tag is useful for displaying (cached) images at different proportions. Images are resized according
+                    to the height/width values you specify with the resulting image cached for faster displaying later on. Note: Any other attribute
+                    not listed will be passed directly on to the resultant &lt;img&gt; tag.
+                </xar:mlstring>
+            </p>
+            <p>
+                <xar:mlstring>
+                    Examples:
+                    <p>
+                        Resize an image's width while keeping the proportions:<br />
+                        <br />
+                        &lt;xar:image-resize src="23" width="92px" constrain="1" label="my logo" /&gt;
+                    </p>
+                </xar:mlstring>
+                <xar:mlstring>
+                    <p>
+                        Apply some pre-defined image processing (e.g. watermark):<br />
+                        <br />
+                        &lt;xar:image-resize src="test/image.jpg" setting="JPEG 800 x 600" label="my image" /&gt;
+                    </p>
+                </xar:mlstring>
+            </p>
+            <h3>
+                <xar:mlstring>Included Blocks</xar:mlstring>
+            </h3>
+            <p>
+                <xar:mlstring>There are no included blocks.</xar:mlstring>
+            </p>
+            <h3>
+                <xar:mlstring>Privileges</xar:mlstring>
+            </h3>
+            <p>
+                <xar:mlstring>
+                The Images module only has the Admin privilege to assign. You will need this level if you want to set the general settings for the Images module.
+                The Images module interacts with the uploads module, so make sure you set appropriate levels for that module as well.
+                Take special note on the approval of files in the uploads module. Only files that have been approved will normally be accessible by standard users, or you need to assign them the EDIT privilege for the uploads.
+                </xar:mlstring>
+            </p>
+                <xar:if condition="xarModGetVar('images','upgrade-1.0.0')">
+                <h3>
+                <xar:mlstring>Upgrade from version 1.0.0</xar:mlstring>
+                </h3>
+                <p>
+                    <xar:mlstring>The naming convention for derivative images has changed since version 1.0.0. So you can delete the old derivative images, and new derivative images will be created as needed in the same directory...</xar:mlstring>
+                </p>
+                </xar:if>
+         <h3>
+            <xar:mlstring>Further Information</xar:mlstring>
+          </h3>
+          <p>
+            <xar:mlstring>Further information on the Images module can be found at</xar:mlstring>
+          </p>
+          <ul>
+            <li><xar:mlstring>Images Project page at</xar:mlstring> <a title="#xarML('Images project page')#" href="http://xarigami.com/project/images">Xarigami Images</a>.
+            </li>
+            <li><xar:mlstring>Related tutorials and documentation on Images found at</xar:mlstring> <a href="http://xarigami.com/resources/" title="#xarML('Related documentation on Images')#"><xar:mlstring>Xarigami Resources</xar:mlstring></a>
+            </li>
+          </ul>
+          <p class="xar-sub">
+            <strong>&nbsp;<xar:mlstring>Images Module Overview</xar:mlstring></strong><br />&nbsp;<xar:mlstring>Revision</xar:mlstring> 1.1.2&nbsp; 2009-01-2
+          </p>
+        </div>
+    </div>
+</div>

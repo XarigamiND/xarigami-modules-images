@@ -1,0 +1,11 @@
+Version 1.1.3
+ - Update phpThumb to 1.7.9-200805132119
+ - Replace functions marked for deprecation in php5.3 for 6
+Version 1.1.1 - Xarigami versions commence
+- Update phpThumb to 1.7.8-200709161750
+
+
+Version 1.0.0 - Mikespub
+Added phpThumbs support, admin UI interface and program interface
+
+Original Version: Carl P. Corliss
