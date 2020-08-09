@@ -29,7 +29,7 @@ class Image_Properties
     var $_tmpFile;
     var $_fileId;
 
-    function __constructor($fileInfo, $thumbsdir = NULL)
+    function __construct($fileInfo, $thumbsdir = NULL)
     {
         if (empty($thumbsdir)) {
             $this->_thumbsdir = './';
@@ -71,11 +71,6 @@ class Image_Properties
             return NULL;
         }
 
-    }
-
-    function Image_Properties($fileLocation, $thumbsdir = NULL)
-    {
-        return $this->__constructor($fileLocation, $thumbsdir);
     }
 
     function _getMimeType($mimeType)

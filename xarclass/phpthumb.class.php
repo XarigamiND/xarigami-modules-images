@@ -212,7 +212,7 @@ class phpthumb
     //////////////////////////////////////////////////////////////////////
 
     // public: constructor
-    function phpThumb() 
+    function __construct()
     {
         $this->DebugTimingMessage('phpThumb() constructor', __FILE__, __LINE__);
         $this->DebugMessage('phpThumb() v'.$this->phpthumb_version, __FILE__, __LINE__);
@@ -3868,7 +3868,6 @@ exit;
                             $this->DebugMessage('deleting "'.$tempfilename.'"', __FILE__, __LINE__);
                             unlink($tempfilename);
                             return $gdimg_source;
-                            break;
                         } else {
                             $ErrorMessage = 'Failed to open tempfile in '.__FILE__.' on line '.__LINE__;
                             $this->DebugMessage($ErrorMessage, __FILE__, __LINE__);

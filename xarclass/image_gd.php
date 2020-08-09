@@ -5,14 +5,9 @@ include_once('modules/images/xarclass/image_properties.php');
 class Image_GD extends Image_Properties 
 {
 
-    function __constructor($fileLocation, $thumbsdir=NULL) 
+    function __construct($fileLocation, $thumbsdir=NULL)
     {
-        parent::__constructor($fileLocation, $thumbsdir);
-    }
-
-    function Image_GD($fileLocation, $thumbsdir=NULL) 
-    {
-        return $this->__constructor($fileLocation, $thumbsdir);
+        parent::__construct($fileLocation, $thumbsdir);
     }
     
     /**
