@@ -96,6 +96,11 @@ function images_userapi_resize($args)
             $attribs .= sprintf(' %s="%s"', $key, $value);
         }
     }
+    if(!isset($setting) && !isset($params)) {
+        $params = [];
+        if(isset($width)) { $params['width'] = $width; }
+        if(isset($height)) { $params['height'] = $height; }
+    }
 
     // use predefined setting for processing
     if (!empty($setting)) {
