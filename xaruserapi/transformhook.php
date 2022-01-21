@@ -54,7 +54,7 @@ function & images_userapi_transform ( $body )
 
         // The remaining indice should be the only one and should contain the arguments
         // that we will package and send to the resize function
-        assert('count($parts) == 1');
+        assert(count($parts) == 1);
         $parts = $parts[0];
 
         switch ( $type )  {
